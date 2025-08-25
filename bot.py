@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
 
 # Bot token will be stored in environment variable (safer for hosting)
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8311101203:AAHA9sZBe0m3-c_tWrGOHFx3Ov4XebYLsN4")
 
 # File name of your QR image
 QR_IMAGE = "qr.png"
@@ -25,7 +25,7 @@ async def auto_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_photo(photo=open(QR_IMAGE, "rb"))
 
     # Wait 5 seconds before sending verification message
-    await asyncio.sleep(5)
+    await asyncio.sleep(120)
 
     # Second message
     second_message = "⏳ After sending, please wait for verification ✅"
